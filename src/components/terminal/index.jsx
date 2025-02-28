@@ -4,7 +4,7 @@ import { useState } from "react";
 import { LuPanelLeftOpen, LuPanelRightOpen, LuFolderSearch, LuHome, LuUser, LuBriefcase, LuFolderGit2, LuMail } from "react-icons/lu";
 
 export default function Terminal({ pageName }) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
@@ -21,7 +21,7 @@ export default function Terminal({ pageName }) {
         </button>
         <h1 className="text-lg">{`~/terminal/${pageName}`}</h1>
       </header>
-      <aside className={`h-full  bg-charade-950 rounded-lg bg-opacity-80 flex flex-col absolute top-0 left-0 gap-4 transition-all duration-500 ease-in-out ${isMenuOpen ? 'w-[20%]': 'w-0 opacity-0'}`}>
+      <aside className={`h-full  bg-charade-950 rounded-lg bg-opacity-80 flex flex-col absolute top-0 left-0 gap-4 transition-all duration-500 ease-in-out ${isMenuOpen ? 'w-[20%]': 'w-0 opacity-0 left-11'}`}>
         <div className="w-full h-10 flex items-center pl-4 border-b border-charade-700 gap-2">
           <LuFolderSearch className="text-lg" />
           <h2>navegação</h2>
